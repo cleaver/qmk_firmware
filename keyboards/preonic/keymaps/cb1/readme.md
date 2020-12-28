@@ -15,6 +15,13 @@ add prev/next tab:
 2020-12-26:
 
 -   add `mute` to Raise/Lower Left
+-   add one-shot shift OSM(MOD_LSFT)
+
+2020-12-28:
+
+-   add little arrow (->) to Lower `u`
+-   add big arrow (=>) to Lower `i`
+-   swap `+` and `=` (move = to Lower)
 
 todo:
 
