@@ -35,3 +35,9 @@
 
 /* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
 //#define MIDI_TONE_KEYCODE_OCTAVES 2
+
+/**
+ * One-shot shift key
+ */
+#define ONESHOT_TAP_TOGGLE 3  /* Tapping this number of times holds the key until tapped once again. */
+#define ONESHOT_TIMEOUT 2000  /* Time (in ms) before the one shot key is released */
