@@ -27,4 +27,3 @@ todo:
 
 -   sort out shift/enter
 -   remove del
--   one shot shift
