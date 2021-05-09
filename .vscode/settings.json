@@ -27,8 +27,7 @@
     "python.formatting.provider": "yapf",
     "[json]": {
         "editor.formatOnSave": false
-    },
-    "clangd.arguments": [
-        "--header-insertion=never"
-    ]
+    }
+    "prettier.enable": false,
+    "editor.formatOnSave": false
 }

@@ -23,7 +23,6 @@ add prev/next tab:
 -   add big arrow (=>) to Lower `i`
 -   swap `+` and `=` (move = to Lower)
 
-todo:
+2021-05-09:
 
--   sort out shift/enter
--   remove del
+-   home row mods (SCAG)
