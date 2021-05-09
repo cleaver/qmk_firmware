@@ -26,3 +26,5 @@ add prev/next tab:
 2021-05-09:
 
 -   home row mods (SCAG)
+-   replace `Del` with `Backslash`.
+-   `Del` is now `Lower-Bksp`.
