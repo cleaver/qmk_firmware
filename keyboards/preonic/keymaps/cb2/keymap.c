@@ -146,9 +146,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_LOWER] = LAYOUT_preonic_2x2u(
   KC_TILD, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,      KC_F8,      KC_F9,   KC_F10,  KC_DEL,
-  KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, CB_RA,   CB_LA,      CB_BA,      KC_LBRC, KC_RBRC, CB_EXP,
-  KC_DEL,  _______, _______, CB_TL,   CB_TR,   _______, _______, KC_MINS,    KC_EQL,     KC_LCBR, KC_RCBR, KC_BSLS,
-  KC_CAPS, _______, _______, _______, _______, KC_F11,  KC_F12,  S(KC_NUHS), S(KC_NUBS), KC_HOME, KC_END,  _______,
+  KC_TILD, KC_1,    KC_2,    KC_3,    _______, _______, CB_RA,   CB_LA,      CB_BA,      KC_LBRC, KC_RBRC, CB_EXP,
+  KC_DEL,  KC_4,    KC_5,    KC_6,    CB_TL,   CB_TR,   _______, KC_MINS,    KC_EQL,     KC_LCBR, KC_RCBR, KC_BSLS,
+  KC_CAPS, KC_7,    KC_8,    KC_9,    KC_0,    KC_F11,  KC_F12,  S(KC_NUHS), S(KC_NUBS), KC_HOME, KC_END,  _______,
   RGB_TOG, RGB_MODE_FORWARD, RGB_MODE_REVERSE, _______, _______, _______,    KC__MUTE,   KC_VOLD, KC_VOLU, KC_MPLY
 ),
 
