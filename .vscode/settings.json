@@ -27,16 +27,8 @@
     "python.formatting.provider": "yapf",
     "[json]": {
         "editor.formatOnSave": false
-    }
-    "prettier.enable": false,
-<<<<<<< HEAD
-    "editor.formatOnSave": false
+    },
+    "clangd.arguments": [
+        "--header-insertion=never"
+    ]
 }
-||||||| parent of 2aa0251662 (change `del` to `backslash`)
-    "editor.formatOnSave": false
-}
-=======
-    "editor.formatOnSave": false,
-    "cSpell.enabled": false
-}
->>>>>>> 2aa0251662 (change `del` to `backslash`)
