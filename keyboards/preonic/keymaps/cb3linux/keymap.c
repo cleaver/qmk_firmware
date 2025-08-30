@@ -83,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,    KC_Q,    KC_W,   KC_E,    KC_R,    KC_T,      KC_Y,   KC_U,       KC_I,    KC_O,    KC_P,    KC_BSLS,
   CB_ESC,    HOME_A,  HOME_S, HOME_D,  HOME_F,  KC_G,      KC_H,   HOME_J,     HOME_K,  HOME_L,  HOME_SC, KC_QUOT,
   KC_LSFT,   KC_Z,    KC_X,   KC_C,    KC_V,    KC_B,      KC_N,   KC_M,       KC_COMM, KC_DOT,  KC_SLSH, KC_ENT,
-  TG(_NUM),  KC_LCTL, KC_LALT,KC_LGUI, LT(_LOWER, KC_SPC), LT(_RAISE, KC_SPC), KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
+  TT(_NUM),  KC_LCTL, KC_LALT,KC_LGUI, LT(_LOWER, KC_SPC), LT(_RAISE, KC_SPC), KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
 ),
 
 /* Colemak
@@ -193,7 +193,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Numeric (Hold Fn)
  * ,-----------------------------------------------------------------------------------.
- * |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |
+ * |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 |  F11 | Bksp |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      | Line↓| Line↑|      |      |      |  7   |  8   |  9   |  +   |  *   |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
@@ -205,7 +205,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_NUM] = LAYOUT_preonic_2x2u(
-  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
+  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_BSPC,
   _______, _______, CB_MLDN, CB_MLUP, _______, _______, _______, KC_7,    KC_8,    KC_9,    KC_PPLS, KC_PAST,
   _______, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, _______, _______, KC_4,    KC_5,    KC_6,    KC_PMNS, KC_PERC,
   _______, _______, CB_CLDN, CB_CLUP, _______, _______, _______, KC_1,    KC_2,    KC_3,    KC_PSLS, KC_ENT,
