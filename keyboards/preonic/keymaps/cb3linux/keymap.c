@@ -25,7 +25,7 @@
 
 // Right-hand home row mods
 #define HOME_J RGUI_T(KC_J)
-#define HOME_K RALT_T(KC_K)
+#define HOME_K LALT_T(KC_K)
 #define HOME_L RCTL_T(KC_L)
 #define HOME_SC RSFT_T(KC_SCLN)
 
@@ -146,7 +146,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TILD, _______, _______, _______,      _______,   _______, CB_RA,   CB_LA,      CB_BA,      KC_LBRC, KC_RBRC, CB_EXP,
   KC_DEL,  _______, _______, S(C(KC_TAB)), C(KC_TAB), _______, _______, KC_MINS,    KC_EQL,     KC_LCBR, KC_RCBR, KC_BSLS,
   KC_CAPS, _______, _______, _______,      _______,   KC_DOT,  _______, S(KC_NUHS), S(KC_NUBS), KC_HOME, KC_END,  _______,
-  RGB_TOG, RGB_MODE_FORWARD, RGB_MODE_REVERSE,        _______, _______, _______,    KC_KB_MUTE, KC_VOLD, KC_VOLU, KC_MPLY
+  UG_TOGG, UG_NEXT, UG_PREV,                          _______, _______, _______,    KC_KB_MUTE, KC_VOLD, KC_VOLU, KC_MPLY
 ),
 
 /* Raise
