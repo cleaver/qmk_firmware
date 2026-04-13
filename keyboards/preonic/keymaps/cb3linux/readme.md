@@ -68,3 +68,7 @@ add prev/next tab:
 2026-04-07:
 
 - change right alt to left alt
+
+2026-04-13:
+
+- add printscreen (for thinkpad linux multilingual input)
