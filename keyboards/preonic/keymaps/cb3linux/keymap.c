@@ -60,7 +60,8 @@ enum preonic_keycodes {
   CB_MLUP,  // move line up - vscode (alt + dn)
   CB_CLDN,  // copy line down - vscode (shift + alt + down)
   CB_CLUP,  // copy line up - vscode (shift + alt + up)
-  CB_NUM
+  CB_NUM,
+  CB_DRCTL  // double tap right control
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -136,7 +137,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | Del  |   A  |   S  | Prev | Next |   G  |   H  |   -  |   =  |   {  |   }  |  \   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Caps |   Z  |   X  |   C  | Pscr |   B  |   N  |ISO ~ |ISO | | Home | End  |      |
+ * | Caps |   Z  |   X  | 2RCTL| Pscr |   B  |   N  |ISO ~ |ISO | | Home | End  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | RGB_T| RGB+ | RGB- |      |             |             | Mute | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
@@ -145,7 +146,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TILD, KC_F1,   KC_F2,   KC_F3,        KC_F4,     KC_F5,   KC_F6,   KC_F7,      KC_F8,      KC_F9,   KC_F10,  KC_DEL,
   KC_TILD, _______, _______, _______,      _______,   _______, CB_RA,   CB_LA,      CB_BA,      KC_LBRC, KC_RBRC, CB_EXP,
   KC_DEL,  _______, _______, S(C(KC_TAB)), C(KC_TAB), _______, _______, KC_MINS,    KC_EQL,     KC_LCBR, KC_RCBR, KC_BSLS,
-  KC_CAPS, _______, _______, _______,      KC_PSCR,   _______, _______, S(KC_NUHS), S(KC_NUBS), KC_HOME, KC_END,  _______,
+  KC_CAPS, _______, _______, CB_DRCTL,     KC_PSCR,   _______, _______, S(KC_NUHS), S(KC_NUBS), KC_HOME, KC_END,  _______,
   UG_TOGG, UG_NEXT, UG_PREV,                          _______, _______, _______,    KC_KB_MUTE, KC_VOLD, KC_VOLU, KC_MPLY
 ),
 
@@ -353,6 +354,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case CB_CLUP:
           if (record->event.pressed) {
             SEND_STRING(SS_LALT(SS_LSFT(SS_TAP(X_UP))));
+          }
+          return false;
+          break;
+        case CB_DRCTL:
+          if (record->event.pressed) {
+            // First press
+            register_code(KC_RCTL);
+            wait_ms(100);         // hold ~100 ms
+            unregister_code(KC_RCTL);
+
+            wait_ms(50);
+
+            // Second press
+            register_code(KC_RCTL);
+            wait_ms(100);         // hold ~100 ms
+            unregister_code(KC_RCTL);
           }
           return false;
           break;

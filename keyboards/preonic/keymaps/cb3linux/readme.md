@@ -71,4 +71,8 @@ add prev/next tab:
 
 2026-04-13:
 
-- add printscreen (for thinkpad linux multilingual input)
+- add printscreen (for thinkpad linux multilingual input) on <Lower>-v
+
+2026-06-17:
+
+- add double-right-ctrl (Vocalinux hotkey) on <Lower>-c
