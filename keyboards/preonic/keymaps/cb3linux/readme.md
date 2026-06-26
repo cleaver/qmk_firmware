@@ -76,3 +76,7 @@ add prev/next tab:
 2026-06-17:
 
 - add double-right-ctrl (Vocalinux hotkey) on <Lower>-c
+
+2026-06-26:
+
+- add colon to numeric layer on <Fn>h
